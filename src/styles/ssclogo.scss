@@ -1,0 +1,40 @@
+.ssc-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 4px 2px rgba(#000, 0.05);
+    background-color: #0c1926;
+    font-family: 'Poppins', sans-serif;
+
+    img{
+    object-fit: cover;
+    margin-bottom: var(--spacing);
+    width: 100%;
+    height: auto;
+    }
+
+    h1 {
+      margin-bottom: var(--spacing);
+      color: #ffffff;
+      font-weight: normal;
+    }    
+  }
+
+.logo-ssc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0.5rem;
+    margin-bottom: 2.5rem;
+    border-radius: 0.25rem;
+
+    img{
+        object-fit: cover;
+        margin-bottom: var(--spacing);
+        height: 207.75px;
+        width: 369px;
+        }
+    
+}
