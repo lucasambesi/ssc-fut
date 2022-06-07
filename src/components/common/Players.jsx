@@ -4,6 +4,8 @@ import { connect } from 'react-redux'
 import { gridJugadores, setScrollContainer } from '../../helpers/ScrollContainer'
 import { types } from '../../types/types'
 
+import '../../styles/searchbar.scss'
+
 const Players = ({players, addTeamPlayer}) => {  
     useEffect(() => {
       setScrollContainer()
@@ -12,8 +14,12 @@ const Players = ({players, addTeamPlayer}) => {
   
   return (
     <section>
-        <h2>Players</h2>
         <div className='contenedor-jugadores'>
+            <div className="search-box">
+              <input type="text" />
+              <span></span>
+            </div>            
+            <br/><br/><br/>
             <div ref={gridJugadores} onClick={() => setScrollContainer.bind(this)}>
                 {
                   players.map( player => {
