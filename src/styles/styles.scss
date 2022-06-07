@@ -42,7 +42,7 @@
     padding-bottom: 2rem;
   }
 
-  section>div:not(.contenedor-jugadores){
+  section>div:not(.contenedor-jugadores):not(.ssc-header):not(.logo-ssc){
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     
@@ -258,11 +258,6 @@
     }
   } 
 
-
-.column {
-  float: left;
-}
-
 /* Clear floats after the columns */
 .row:after {
   content: "";
@@ -272,5 +267,5 @@
 }
 .center {
   margin: 0 auto;
-  width: 50%;
+  width: 54%;
 }
