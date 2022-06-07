@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { gridJugadores, setScrollContainer } from '../../helpers/ScrollContainer'
 import { types } from '../../types/types'
 
-import '../../styles/searchbar.scss'
+import '../../styles/searchbox.scss'
 
 const Players = ({players, addTeamPlayer}) => {  
     useEffect(() => {
