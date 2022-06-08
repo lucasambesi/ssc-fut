@@ -1,28 +1,25 @@
 import React, {useEffect} from 'react'
 import { connect } from 'react-redux'
 
+import Searchbox from './Searchbox'
 import { gridJugadores, setScrollContainer } from '../../helpers/ScrollContainer'
+
 import { types } from '../../types/types'
 
-import '../../styles/searchbox.scss'
-
-const Players = ({players, addTeamPlayer}) => {  
+const Players = ({search, addTeamPlayer}) => {  
     useEffect(() => {
       setScrollContainer()
       document.addEventListener('click', setScrollContainer)
-    }) 
+    }, [])
   
   return (
     <section>
         <div className='contenedor-jugadores'>
-            <div className="search-box">
-              <input type="text" />
-              <span></span>
-            </div>            
+            <Searchbox/>
             <br/><br/><br/>
             <div ref={gridJugadores} onClick={() => setScrollContainer.bind(this)}>
                 {
-                  players.map( player => {
+                  search.map( player => {
                       return(            
                       <article key={player.id} className='jugador'>
                           <h3>{player.name}</h3>
@@ -41,7 +38,7 @@ const Players = ({players, addTeamPlayer}) => {
 }
 
 const mapStateToProps = (state) => ({
-    players: state.players
+    search: state.search
 })
 
 const mapDispatchToProps = (dispatch) => ({
