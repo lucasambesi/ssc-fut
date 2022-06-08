@@ -1,6 +1,6 @@
 import { Provider } from 'react-redux'
 
-import Players from './components/common/Players'
+import SelectionPlayers from './components/common/SelectionPlayers'
 import store from './Store/store'
 import { SelectedTeam } from './components/common/SelectedTeam'
 import { Logo } from './components/common/Logo'
@@ -12,7 +12,7 @@ export const App = () => {
       <Provider store={store}>
         <main>       
           <Logo/>        
-          <Players/>
+          <SelectionPlayers/>
           <SelectedTeam/>
         </main>
       </Provider>
