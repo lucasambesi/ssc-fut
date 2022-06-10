@@ -1,34 +1,16 @@
-import React, { useEffect } from 'react'
-import { connect } from 'react-redux'
-
-import Searchbox from './Searchbox'
-import { gridJugadores, setScrollContainer } from '../../helpers/ScrollContainer'
-import Player from './Player'
+import { typesPlayer } from '../../types/types'
+import InternalPlayers from './InternalPlayers'
+import ExternalPlayers from './ExternalPlayers'
  
-const SelectionPlayers = ({ search }) => {  
-
-    useEffect(() => {
-      setScrollContainer()
-      document.addEventListener('click', setScrollContainer)
-    }, [])
-  
+const SelectionPlayers = ({ type = typesPlayer.INTERNAL}) => {  
   return (
     <section>
-        <div className='contenedor-jugadores'>
-            <Searchbox/>
-            <br/><br/><br/>
-            <div ref={gridJugadores} onClick={() => setScrollContainer.bind(this)}>
-                { search.map( player => <Player player={player} />) }
-            </div>
-        </div>
+        { (type === typesPlayer.INTERNAL) 
+            ? <InternalPlayers/> 
+            : <ExternalPlayers/> 
+        }
     </section>
   )
 }
 
-const mapStateToProps = (state) => ({
-    search: state.search
-})
-
-const mapDispatchToProps = (dispatch) => ({})
-
-export default connect(mapStateToProps, mapDispatchToProps)(SelectionPlayers)
+export default SelectionPlayers
