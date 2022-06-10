@@ -7,7 +7,7 @@
     padding: 1rem;
     border-radius: 0.25rem;
     box-shadow: 0 2px 4px 2px rgba(#000, 0.05);
-    border: 1px solid #104266;
+    border: 1px solid #0e5d96;
   
     h3 {
       margin-bottom: var(--spacing);
@@ -15,33 +15,15 @@
       font-weight: normal;
     }
   
-    button {
+    Button {
+      $color: #127ac5;
+      $back-color: #00000000;
       line-height: 2rem;
       padding: 0 1rem;
-      border-radius: 1rem;
-    }
-  
-    button:first-child {
-      $color: #2A8CE1;
-      color: #fff;
-      background-color: $color;
+      border-radius: 1rem;      
+      color: $color;
+      background-color: $back-color;
       margin-right: var(--spacing);
-  
-      &:hover {
-        background-color: darken($color, 10);
-      }
+      border-color: $color;
     }
-  
-    button:nth-child(2) {
-      background: rgb(83, 87, 90);
-      color: white;
-      border: 1px solid var(--color);
-  
-      &:hover {
-        background-color: rgb(58, 62, 65);
-        color: #fff;
-      }
-  
-    }
-  
   }

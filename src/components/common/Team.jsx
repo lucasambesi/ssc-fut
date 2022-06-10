@@ -14,7 +14,7 @@ const Team = ({team, players, deleteTeamPlayer}) => {
                     <article className={team} key={player.id}>
                         <div>
                             <img src={player.image} alt={player.name}/>
-                            <button onClick={() => deleteTeamPlayer(player, types.DELETE, team)}>X</button>
+                            <button onClick={() => deleteTeamPlayer(player, types.DELETE, team)}>X</button>                            
                         </div>
                         <p>{player.name}</p>
                     </article>

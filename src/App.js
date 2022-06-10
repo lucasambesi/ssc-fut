@@ -9,12 +9,14 @@ import './styles/styles.scss'
 
 export const App = () => {
   return (
-      <Provider store={store}>
-        <main>       
-          <Logo/>        
-          <SelectionPlayers/>
-          <SelectedTeam/>
-        </main>
+      <Provider store={store} >
+        <div className='contenedor'>       
+          <main>
+            <Logo/>        
+            <SelectionPlayers/>
+            <SelectedTeam/>
+          </main>
+        </div>
       </Provider>
   )
 }

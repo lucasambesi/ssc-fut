@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import Searchbox from './Searchbox'
 import { gridJugadores, setScrollContainer } from '../../helpers/ScrollContainer'
 import Player from './Player'
- 
+
 const SelectionPlayers = ({ search }) => {  
 
     useEffect(() => {
@@ -16,7 +16,7 @@ const SelectionPlayers = ({ search }) => {
     <section>
         <div className='contenedor-jugadores'>
             <Searchbox/>
-            <br/><br/><br/>
+            <br/><br/>
             <div ref={gridJugadores} onClick={() => setScrollContainer.bind(this)}>
                 { search.map( player => <Player player={player} />) }
             </div>
