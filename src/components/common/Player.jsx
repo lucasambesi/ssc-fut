@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 
 import { types } from '../../types/types'
 
+import Button from 'react-bootstrap/Button'
 import '../../styles/player.scss'
 
 export const Player = ({player, addTeamPlayer}) => {
@@ -11,8 +12,8 @@ export const Player = ({player, addTeamPlayer}) => {
             <h3>{player.name}</h3>
             <img src={player.image} alt={player.name}/>
             <div>
-                <button onClick={() => addTeamPlayer(player, types.TEAM_BLACK)}>Black</button>
-                <button onClick={() => addTeamPlayer(player, types.TEAM_WHITE)}>White</button>
+                <Button variant="light" size="sm" onClick={() => addTeamPlayer(player, types.TEAM_WHITE)}>Blanco</Button>
+                <Button variant="dark" size="sm" onClick={() => addTeamPlayer(player, types.TEAM_BLACK)}>Negro</Button>
             </div>
         </article>
   )

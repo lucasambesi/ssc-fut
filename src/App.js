@@ -10,13 +10,14 @@ import { typesPlayer } from './types/types'
 
 export const App = () => {
   return (
-      <Provider store={store} >    
+      <Provider store={store} >
+        <div className='contenedor'>       
           <main>
             <Logo/>        
             <SelectionPlayers/>
             <SelectedTeam/>
-            <SelectionPlayers type={typesPlayer.EXTERNAL}/>
           </main>
+        </div>
       </Provider>
   )
 }
