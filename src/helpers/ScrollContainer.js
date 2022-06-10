@@ -1,9 +1,10 @@
 import { createRef } from 'react'
 
-export const gridJugadores = createRef()
+export const gridInternal = createRef()
+export const gridExternal = createRef()
 
-export const setScrollContainer = (desktop = true) => {
-    let container = gridJugadores.current
+export const setScrollContainer = (desktop = true, isInternal = true) => {
+    let container = isInternal ? gridInternal.current : gridExternal.current
     if (container) {
       const generatedGrid = () => {
         let items = container.getElementsByClassName('jugador')
