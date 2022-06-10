@@ -6,6 +6,7 @@ const initialState = {
     search: players,
     white: [],
     black: [],
+    external: [],
 }
 
 const reducerCoach = (state = initialState, action) => {
