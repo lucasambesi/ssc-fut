@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 
 import { types } from '../../types/types'
 
+import '../../styles/teams.scss'
+
 const Team = ({team, players, deleteTeamPlayer}) => {
   return (
     <>

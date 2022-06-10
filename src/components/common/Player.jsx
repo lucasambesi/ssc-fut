@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 
 import { types } from '../../types/types'
 
+import '../../styles/player.scss'
+
 export const Player = ({player, addTeamPlayer}) => {
   return (
         <article key={player.id} className='jugador'>

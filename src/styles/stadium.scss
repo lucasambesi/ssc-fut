@@ -1,0 +1,86 @@
+.stadium {
+    margin: 0 auto;
+    width: 75%;
+    position: relative;
+
+    .white,
+    .black {
+        position: absolute;
+
+        img {
+        --size: 3rem;
+        }
+
+        p {
+        @media screen and (max-width: 640px) {
+            display: none;
+        }
+        }
+    } 
+
+    //----- Posiciones de los jugadores -----//
+
+    .black:first-child {
+        left: 10%;
+        top: 50%;
+        transform: translateY(-25%);
+    }
+
+    .black:nth-child(2) {
+        left: 50%;
+        top: 30%;
+    }
+
+    .black:nth-child(3) {
+        left: 50%;
+        top: 60%;
+    }
+
+    .black:nth-child(4) {
+        left: 80%;
+        top: 10%;
+    }
+
+    .black:nth-child(5) {
+        left:80%;
+        top: 80%;
+    }
+
+    .black:nth-child(6) {
+        left: 100%;
+        top: 50%;
+        transform: translateY(-25%);
+    }
+
+    .white:first-child {
+        left: 97%;
+        top: 50%;
+        transform: translateY(-25%);
+    }
+
+    .white:nth-child(2) {
+        left: 55%;
+        top: 30%;
+    }
+
+    .white:nth-child(3) {
+        left: 55%;
+        top: 60%;
+    }
+
+    .white:nth-child(4) {
+        left: 30%;
+        top: 10%;
+    }
+
+    .white:nth-child(5) {
+        left: 30%;
+        top: 80%;
+    }
+
+    .white:nth-child(6) {
+        left: 0%;
+        top: 50%;
+        transform: translateY(-25%);
+    }
+} 
